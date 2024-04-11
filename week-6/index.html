@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Template</title>
+  </head>
+  <body>
+    <script>
+      function isGreaterThanTenAndSmallerThanFifteen(number) {
+        if (number > 10 && number < 15) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+
+      let anotherNumberTestResult = isGreaterThanTenAndSmallerThanFifteen(13);
+
+      console.log(
+        'Is 13 larger than 10 and smaller than 15',
+        anotherNumberTestResult
+      );
+
+      function isGreaterThanTenOrSmallerThanZero(number) {
+        if (number > 10 || number < 0) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+
+      let justAnotherNumberTestResult = isGreaterThanTenOrSmallerThanZero(13);
+
+      console.log(
+        'Is -5 larger than 10 or smaller than 0',
+        justAnotherNumberTestResult
+      );
+
+      let numbers = [3, 10, 11, 9, 8, 9, 3, 2, 1, 999];
+
+      console.log(numbers[3]);
+      console.log(numbers.length);
+
+      function countFromZeroToTen(number) {
+        for (let i = 0; i < 11; i++) {
+          console.log(i);
+        }
+      }
+      countFromZeroToTen(10);
+
+      function getTheLargestNumber(numbers) {
+        let largestNumber;
+
+        for (let i = 0; i < numbers.length; i++) {
+          let currentNumber = numbers[i];
+
+          if (i === 0) {
+            largestNumber = currentNumber;
+          } else {
+            if (largestNumber < currentNumber) {
+              largestNumber = currentNumber;
+            }
+          }
+        }
+
+        return largestNumber;
+      }
+
+      let largestNumberResult = getTheLargestNumber(10);
+
+      console.log('The largest number of', numbers, largestNumberResult);
+    </script>
+  </body>
+</html>

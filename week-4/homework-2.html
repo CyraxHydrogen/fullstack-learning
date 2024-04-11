@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Homework-2</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+      body {
+        display: block;
+        margin: 8px;
+        font-size: 14px;
+        font-family: 'Orbitron', Helvetica, sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        background-color: #0e0e0e;
+        padding-bottom: 100px;
+      }
+      .heading {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .left-heading {
+        color: white;
+        width: 30%;
+      }
+      .mid-heading {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        color: red;
+        font-size: 20px;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: center;
+      }
+      .mid-heading img {
+        border-radius: 4px;
+        width: 60px;
+        height: 60px;
+        position: relative;
+      }
+      .border::before {
+        content: '';
+        position: absolute;
+        border-radius: 4px;
+        inset: -2px;
+        z-index: -1;
+        background: linear-gradient(var(--angle), #032146, #c3f2ff, #b00);
+        animation: rotate 6s linear infinite;
+      }
+      .right-heading {
+        width: 30%;
+      }
+      .header.st-item a {
+        color: white;
+        background-color: red;
+      }
+      .header.st-item a:hover {
+        transition: all ease-in 400ms;
+      }
+      .header a:hover {
+        transition: all ease-in 400ms;
+      }
+      .header a {
+        display: inline-block;
+        margin-bottom: 5px;
+        color: gray;
+        font-size: 12px;
+        text-decoration: none;
+        padding: 5px 15px;
+        border-radius: 4px;
+        transition: all ease-in 400ms;
+      }
+      .header {
+        text-align: right;
+      }
+      .stat-list {
+        display: flex;
+        justify-content: space-evenly;
+        color: white;
+        margin-top: 50px;
+      }
+      .stat-item-title {
+        margin-bottom: 20px;
+        font-size: 20px;
+        text-align: center;
+      }
+      .stat-item-content {
+        display: flex;
+        gap: 30px;
+        text-align: center;
+      }
+      .stat-item-number {
+        font-size: 35px;
+      }
+      .stat-item-text {
+        color: gray;
+      }
+      .content {
+        max-width: 1140px;
+        margin: 0 auto;
+      }
+      .about-me {
+        margin-top: 140px;
+        display: flex;
+        color: white;
+      }
+      .about-me-image {
+        text-align: center;
+        flex: 1px;
+      }
+      .about-me-image img {
+        max-width: 300px;
+      }
+      .about-me-content {
+        flex: 1;
+      }
+      .section-title {
+        color: white;
+        font-size: 30px;
+        border-bottom: 4px solid red;
+      }
+      ul {
+        display: block;
+        list-style-type: disc;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        padding-inline-start: 40px;
+      }
+      .favourite-videos {
+        margin-top: 100px;
+      }
+      .favourite-videos-list {
+        display: flex;
+        justify-content: space-evenly;
+      }
+      .favourite-video-item {
+        margin-top: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div class="heading">
+        <div class="left-heading">Sydney, AU</div>
+        <div class="mid-heading border">
+          <div>
+            <img
+              src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBUWFRgVEhUYGBESEhISERIREhESEhIRGBgZGRgUGBgcIS4nHB4rIRgYJjgmKy8xNTU1GiQ8QDszPy41NTEBDAwMEA8QHhISHzQrJCw0NDQ0NDQ0NDQ0NDQ0NDE2NDQ0NDQ0NDE0NDQ0NDQ0NDQxNDE0NDQ0NDQ0NDQ0MTQ0NP/AABEIAQ8AugMBIgACEQEDEQH/xAAbAAABBQEBAAAAAAAAAAAAAAAAAgMEBQYBB//EAEAQAAIBAgMFBQYDBQcFAQAAAAECAAMRBBIhBTFBUWETMnGBkQYiUqGxwUJy0QcUI2LwFVOCksLh8SSTorLSFv/EABkBAAMBAQEAAAAAAAAAAAAAAAACAwEEBf/EACgRAAMAAgICAQIGAwAAAAAAAAABAgMRITESQQQiUTJSYXGRoRMUgf/aAAwDAQACEQMRAD8A9mhCEACEIQAIQhAAhCEAOSDjdpJT7x15cY1tfGlRlTWo2ijl1lXR2aL5qhzNxuTlH6zmy5a34x37fpF8eNPmuhdX2mH4V+dzeR//ANMeQ9DJ/ZAD3QAP5QB9Iy6znazfn/o6ZjF+X+wo+0qneBwvY7pb4XaFN+6RflxmYxGFRjqi352APqJVYzCOhz0nYW/CSfkd8acmae9NfwFYMVdcM9IhMVsH2r1FLEe6RYBz/q/WbNWBFxqDOvHkVraOPJirG9MXCEJQmEIQgAQhCABCEIAEIQgAQhCABCEIAcjdaoFUsdwBMKtUKLk2Eh4iurABTcXuehB3EcNYlPSeuxpltr7EChSNy7d9uf4V4L+sk2kXaGKWmhZ2Ki4UFRmYsdAqi2pPKVjbYdBmdXWnp72IpNSAvuuw0H+K05fwrSTOwunkd21tIqbUDrfLbiCGV0bwZTrGK+OVS7EgBVNi24GZvfRRS12SGZUBZiB1JsAJRY3bFEmwe/UA29ZS1cW9dz2aPVPBVKKoA5AmSdnoWJV0ZHXvU3GVgOfUdRN1S/QafBvvbI+Nw+fUb96t/XCbP2F2waqNSqE9pS+I3JX/AGlA+FCiwGgGnSM7DqmljKbjRajdk/8Ai0U+tpscUmZknyhr/qPU4Tk7Ow8wIQhAAhCEACEIQAIQhAAhCEAOQhGcRVyi/HcPGY3pbNS29FRtSmXqAEkIg1sbXbTT5/KKzAaCJqud5OsiVKk5arls74htJfYlqULIza9mWZRobMRYN5At6zzr9oSbSr12FCizYcKyUyHT3b6ZxZgVbQm5+Kx3TYu7X0MepVTxhORoL+MnyzJfs+2FiqNKp+9nKHdWpqzLUdQA2YlgSNfd0ud3CTfaqgTg67UQXdUOVV943BGbQchc25TS1FZtzWUKbjiW0try3zPUMNWSoTTNwTdySLW/DfrvmeX1bGmfp8dnif8AbVUVTVpkoM+ZaYd2RBfRRmN/O957ds3GnE4ehVYfxbWLW94qUza+RW/UQx3s3hKxLVsPSLtqzKuQseZK2Jk3B00pgBQAi91FB57rnhe2kpeRNaIR8eppUhOJo2Ez+PBU5l7ykMv5lNx8xNLWxIbhoZWY6mhG6RTOrTRvcDjEqKrKR76K9gQSAwBF/WS55BhqrUnDI1irZkPI7/TpyM9aoVMyqw3MoPqLzrmvI4M2Lw0/THoTk7HIhCEIAEIQgAQhCABCEIAclbjn963IfM6/pLIykxj+83j9pLK9SWwrdDFQxhxHSYkicx3LgjlYpViys5MGdD1OR6WhPWP9oqLmYgDqbCVKbRVqmVdQdLi5F5rMlN7JlRZGdJMqLIlQxWUl8EeoZW4qpJOJqSrrPeagZDrNrfhxsbEjjrwnrezMZTq01ekboQAOYt+EjgRPJK0mbA2xUw7XTVSffpk6MPs3WXitHLnxulweuQkLZm0UroHpm43EHRlb4WHAybOg4WmnpnYTk7AwIQhAAhCEAOQhGMRWtoN5+QmNpLbNSbekIxFbgPM/aVGK0bxAP2k2Rsel1uN66+XGct065OvGlL0Rrzt4wlS8UWky+hRMFS8QDHle01A2LNMWsQPMXlaaCK9wAOdhaSqlaQ2q6wYTtEqs95XYlrSUKgtKrHV9dJg0kXEPITmOO8YdpowxUMThl+sU5i8Ms0xostm456Dh6Z6Op7rryP68J6NsraSV0DoejKe8rcjPNQskbOxz0HDpu3Op3MvI/Y8JSL0Qy4lS2uz1CEibPxqVkDobqfVTxBHAiS50nC1o7CEIGBCE5ABurUyi/oOZkBjfU7zFVqmY9BoP1iJz3W2dETpBEMeE6zRgvrJtlUimxQKN/IdR06RS1pYY2iGWUNdSp6SXTOmdUiwFYTjYgSobERtsRGTByWVfEyufEyPUryM7zQUk58Wbb5CqVbxtnjRaAyQpnjbNAmJgaAF5JpCNU0kims0xkqmJ10ggj2WArHNi7UbD1Lm5pNYVFHLg46j5jyno1NwwDKbqQCCNQQdQZ5fWpy/9jtq5W/d3Ohu1Engd7J9SPPpLY79M5M+Pa8kbWEIS5yHJGxdSwsN5kkysqPmJPp4RMj0imOds4JxjOmNO05zpS2JZpGZtYqq8jhtYjZWUTF1EgYzD3kyk2k5UW8OwT0zK4vDkSvckTU4mheVGJwkUsq2VDPG2aSamHIjRpRjRm8I8KcWtOAEYJFrTkgJFBYA2NqkdRYBYsCBg4gklEiMPTuZPWnARkRqcgYhCpDKbOpDKw3hgbgjzl2ach4qlpNMNxsXHivRWoNCws6/C40YevytLGYX2HxmWq9An3XHaIP51sG9Rb/JN1OuK8ls87JHjTRGxT2XqdP1kIR7Ftc25D5n+hGZG3ui2Nak45kV2j7mR2Emy8ojVnjaGGI6Ruk95MqlwT6ZimMRT3QMYmN1BItWmJLaNOIDIqq+GkR8LLhxEhJg+ylOGiewl4aIiGw4gGyl7Kc7OXDYaI/dYBsq8kXRpljYSbWpADWWOzcCALneYGt6WxvD4Wwi2SWLpItRZpPeyKwkXEjSTHEjV90DUVOBrdniaT8qihvyv7jfJjPUp5FtEb7b+HjPV8PWzKrfEqt6i8vifBy/JXKZBqNcnxP6QiCdT4n6xQkt8ja4EVJGqSU8jVJjKSQqglXXqlDcbxw59Jb1ZTYwybLxyX2DqB0DDcReOsJTbCxWhQ/hJt4HWXDGUXRKlp6EERpxFs0QzTARGdYqmk65isM9zaYN6HBSh2clRDRtC7I/ZzjJHjENMBEJqWZ1XhfM35R/vYecuEEr6HfP5D9RJmaKhq54HGEjVFkgGJcRhUV1QSHWlhWEgVxMGKLHib/Y+L/6ejff2FK/+QTBY/jJ+E2jlpot+6ij0AEpD0hMk+WjY1B7zfmb6zoisWtnPUAj6faNkwpabJTykcqNIVarHnud0R+5g94+UR7ZWdLsq6+KA4ynxOIuZq2wFO2qjz1kDGbPo27oHUaGLorFr0UOArWe/hNMta4mVxWH7Nrqbr13iSqG0dNYwUtsv2eIZ5Vf2gJxseOcDPEsneNYOr/FA5gyubHDnG6OLs6twB+Uw1Twax3jLPK+pj15yO+PHObsVSy1NSNPVlS+0JGqbQitjqC0TFAOOoK/f7SfRq5vCZ3Z1A13y6hF1dhw5KDzP6zY06KgWAAA3ATFLMupngaQzrRbJaNs4jE97IteV2JMsKxlTjaloDIqMY2+RUpkgG28CLxT75u9l7FBo0iwsxpUyw5HKLykrYt346LbaSd1uRynz3f11kO8t69MMpU7iLeEz+cgkNoQbGPlWns58FbWvsSliiYyrzrGS2W0M4mqQJBGGd9SbLz4+UsRTBNz5CLaLrYyeuigxuzUsbXJ5kzK1EZGKnhu6ieg1EvKXa2xy4zL3hqOvSC4KKt8Mz1CmzbjLKlshjvaQ8M+RrMLMDqDL/C1wZrNbaIQ2Gfi+UcTYhH4vlLpGjimAvkyn/sgW3nykWtsdh3W9ZojGngCpmUq4FxEYTAPUcINL6s3BV4mah6DNuEsMBhFRdO82rHn08IIKvSO4LCrTQKgsqjzJ4k8yY8xtFM9pErVZrJJNiqlaQ6tWNu8g4jEWi7KKR6viJT4uvedr17yvrVJqG1oe2bgjiK6Uh3Wa79Ka6semmniRPWbTO+yOxTQQ1Kg/j1bFgd6JvCePE9bDhNHOrHOkefmyeVcHZVbVwBcZk0qKNx0DjkeR5H+hawj1Ka0yc05e0ZChitSraMpsytoQeREmo4Mn7U2WlUXPuuNFdd/gw/EOn0mbxdKvQ765kH40uy26jevn6zlrHU/sdsZJv9GWzOIk1JRrtUHjHV2gp4ybZXxZbq4jystpSril5xYxg5wTMc7JmIpDUooJ6gXPrM3ia5SoobKGZTdE3KQeJ4m304ybi9sKumb03zLVKwepdcx1uWci/kBuE3srK0uTYYbEXEmK8zWFxFpb0MReYK0WGaJIv+IKeBIuL+EbV51mIBy2vbS4uD4iAqJCYi+nHnHu0tMvT2tZjnIBBIIGljy1jr7bXnN2zXJe1a8g18SBKOttjrIVXHE87TNAloua+OEra+KvK58R4yM9Rj0+cZSb0WdFXqNlpqzMdyqLnxPIdTNp7Oey4pEVa9mqjVEGqUzz/mbruHDnIf7OcbmSpSYDMjBlIABZWvcEjfYjefiA4TbTojGlycOXNT3KOwhCVOc5EswAudAPlFSNjqQam6m9mRgbb7ETG9LYPfo69ZSLA68N4kGvjwupHu3seDD+bXQyr2UtXM3aAqgBAVmVizlr5h8KgaAX4+EV7QYpadFnC6rawF9WJAvYEXtcm1xunm5Pk35KU1369mx9S3pr9yBj9m0mzPTUFLnOq6OhG82G9fp4bqTEYMr3dRwMufY7MGdylxiXDLUp01RUIBuCAzZQSL6ned2st8dsoalBa+pAF0PXKNV8r+E6njbSfv2jrx50vpr+TBtnEbao/MzSYrZvMW5Hep8CJXVtnsOEl12dKaa2mUjU779fGPU0A3CSnwpHCJ7KbsY4hkujXIkdUg7hd5t4zALeji+cmU6wMoKb33SXQczDGi0cA8AfECMPQT4E/wAi/pFU2imaBhEemo3KB4KBK7EiWOJqCVVepeAyIjrGXWSLX3RxcMd5/wCJWZb5ZHLlSWl2Xn7P6ZGIfl2DZuVy6W+hnocx/sCykVrDUOgzcSLNYet/WbCdK6OCk09M7CEJooRLC4seOhioQApsTQqKfdQuOGVkU+eYj5TN7caodHTKi31Lqff3WNrgWF9SQNd83koNpUrlh1v6i/3nDXxccV5pF8L3XJiti458NU4ilUNyPw/nU7iPDfN5S2irLffccJlX2PYnKxW5ubWsTzKnRvMGcDVae6zKPh0NvynQnzUS85F0x8mFvlFlSwtdM7owZGYt2VR8zFfzHS+luA53jeF2hRqaEZHPwmwOp3cD6CQcXtgPSem10d6bqDY2FwRq270MjYzFLWektNDkCMarKvuUwBZFDDQm/AcryrSpEU6l/Yv6uzwdxU9GBU+usr62ziPwG3NbP9JPw2KKEJUOZfwudTbkZOzLvFx4GTeKX0UnPS7Mu1Fb248joY22BRu9rNU4vvIYcnUH9ZGqYRD+BP8ACSn0IivC/TKr5K9oo1pKBYAaTqpLNsGn92P+5U/+oj91HBEHi7t56mL/AIaN/wBiSHntGHrMe6CfAX+ksv3cj4F/Igv62g1IcWJ87CMsP3Yr+QvSKV6Ltw9Yunsht9Q2Hpf9ZbdoF7oAPO1z6yFiMXzNzHUTIlZbvhDT00QaDQcTvkDE1i3Qcot3J1MjVjJ1e+EWxYtc12a79nqe7WbnUVfRb/6psZmPYKnbDFv7ys7egVP9M08vH4UcmV7tnYQhGJhCEIAclTtNbMDwYfMf8iW0g7Tp3S/FTm8uP6+US1uSmJ6pFPVkDESXVeQa7zkZ3yVWKQcN/SM08Vl0bTqN3mI/iGlZXaNNOejaiaXJahuKtpwsdPKTKOLYCx1mc2dh6tWoKdDvNqfgVRvZuQH9azdH2U90WrHPYZiUBUnjYAggeZnRLbOLJKl62V4xZnGxXWPP7NYgd1kYdWZT6ZfvGW2DivhU+DrG5J8DL4qIOMklfZzEneEH5qh+wMfpeyVQ9+qo/Ipf62hyHBVvj4lsXxJA8ZcbQ9kjk/gVD2o1tUC5GHwiw909dfuMWysrFagKupsVbvAxKbkrjhV7LCtjCdF9T9hGkHONrHkEhVN9nZMTPR1hIOJaTah0kIUTUdaY31HVB0zEC/zgkDej0z2Xw+TCURzphz4vdz/7S3iEQAADQAAAcgN0XOtcI8xvb2dhCE0wIQhAAiWFxY8dDFTl4AZDaNIoxU7t6nmp3fp5SrrtNdtzBdolx311XqDvH9cphsXhqyd5GtzAuPlOW40zvxX5SR8Q8hFWZgqAs7kKqjezHQCLZviNppfYPC03Z618z0yEUfBmGreJ1Hkec2J2zcl+M7NF7ObGXDU7aGq9mqsOLcFH8o4eZ4y5nLwvOhLRwNtvbOzs5eF5ph2ETmnbwAJSbf2EuIW+i1lH8N7f+Lcx9OHG91edmNb7NTae0eSPSZGZHBDqbEHgfuOsfQzUe3FCn2a1TpVDBEtvdTqVPQC5v5cZlKdQSFRpndGR1OwrHST/AGNwmfFByPdooz34Zj7ij5sf8Mra9TS9jbym89k8GqYdHXvVlWo7cTce6PAD785sTyJmvUl/CcvC8ucZ2EIQAIQhAAibRUIAQsbUOUgKTcEafWZ/EYpgCGUqwR2s1Nz7y2yi4BBvfxmsnLRXKY8W5PPtqISrmmpd0qLkTs3OemVUldRwJbXpHcMXSpfCUnAYEVc6PTVgO7e43g33czN2VnOzHKYoSex6zOlrRSUMRVI95bHxkgVHln2Y5TuQco5ErO0frOh3llkEMggBW53nc7yxyCdywArS7xmtVrAe6Ly4yzmWAGG2pQxFQkvSLELlQqVsvkZCw2yK1k7Si+YZ+0K9mQVykIBrrraej2haK5TKzmqVpHm7bCruAOycZqdnN0Fqumo13b5utn3VFQJlVFVVF72VRYD5SfOQUpC1brsSIoTs7GECEIQA/9k="
+            />
+          </div>
+          <div>Jack Vo</div>
+        </div>
+        <div class="right-heading">
+          <div class="header st-item"><a href="/">Home</a></div>
+          <div class="header"><a href="/">My Games</a></div>
+          <div class="header"><a href="/">My Friends ListMy Games</a></div>
+        </div>
+      </div>
+      <div class="stat-list">
+        <div class="stat-item">
+          <div class="stat-item-title">Watched</div>
+          <div class="stat-item-content">
+            <div>
+              <div class="stat-item-number">237</div>
+              <div class="stat-item-text">Movies</div>
+            </div>
+            <div>
+              <div class="stat-item-number">23</div>
+              <div class="stat-item-text">Series</div>
+            </div>
+            <div>
+              <div class="stat-item-number">05</div>
+              <div class="stat-item-text">Docs</div>
+            </div>
+          </div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-item-title">Games played</div>
+          <div class="stat-item-content">
+            <div>
+              <div class="stat-item-number">150</div>
+              <div class="stat-item-text">Action</div>
+            </div>
+            <div>
+              <div class="stat-item-number">45</div>
+              <div class="stat-item-text">RPG</div>
+            </div>
+            <div>
+              <div class="stat-item-number">02</div>
+              <div class="stat-item-text">FPS</div>
+            </div>
+          </div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-item-title">Time spent Sleeping</div>
+          <div class="stat-item-content">
+            <div>
+              <div class="stat-item-number">13</div>
+              <div class="stat-item-text">Years</div>
+            </div>
+            <div>
+              <div class="stat-item-number">02</div>
+              <div class="stat-item-text">Months</div>
+            </div>
+            <div>
+              <div class="stat-item-number">15</div>
+              <div class="stat-item-text">Days</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content about-me">
+        <div class="about-me-image">
+          <img
+            src="https://media3.giphy.com/media/leuNkvf9pE6loEnjnb/source.gif"
+          />
+        </div>
+        <div class="about-me-content">
+          <div class="section-title">True fact</div>
+          <ul>
+            <li>Gymer by morning</li>
+            <li>Coder by day</li>
+            <li>Gamer by night</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="content favourite-videos">
+      <div class="section-title">My favourite Videos</div>
+      <div class="favourite-videos-list">
+        <div class="favourite-video-item border">
+          <iframe src="https://www.youtube.com/watch?v=GMI_7NQ4rlM"></iframe>
+        </div>
+        <div class="favourite-video-item border">
+          <iframe src="https://www.youtube.com/watch?v=-kdZz2eryZ4"></iframe>
+        </div>
+        <div class="favourite-video-item border">
+          <iframe src="https://www.youtube.com/watch?v=A_Q-0sHKQvw"></iframe>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

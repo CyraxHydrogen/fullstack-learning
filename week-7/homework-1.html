@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HomeWork</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .content {
+        display: flex;
+        height: 100vh;
+        width: 100%;
+      }
+      .info {
+        width: 444px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        justify-content: flex-start;
+        align-items: center;
+        background-image: url(https://preview.keenthemes.com/metronic/theme/html/demo1/dist/assets/media/svg/illustrations/features.svg);
+        background-repeat: no-repeat;
+        background-position: bottom;
+      }
+      .number {
+        border: 1px solid;
+        border-radius: 50%;
+        font-size: 30px;
+        margin-right: 40px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        padding-right: 10px;
+        padding-left: 10px;
+        background-color: #f3f6f9;
+      }
+      .number-1 {
+        border: 1px solid;
+        border-radius: 50%;
+        font-size: 30px;
+        margin-right: 40px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        padding-right: 10px;
+        padding-left: 10px;
+        background-color: #c9f7f5;
+        color: #1bc5bd;
+      }
+      .sub {
+        margin-left: 80px;
+        color: #b5b5c3;
+        font-size: 1.08rem;
+        font-weight: 500;
+      }
+      img {
+        margin-top: 40px;
+        margin-bottom: 100px;
+      }
+      .text {
+        color: #181c32;
+        font-weight: 500;
+        font-size: 1.4rem;
+      }
+      .login {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        background-color: #f3f5f9;
+        justify-content: center;
+        padding-left: 301px;
+        position: relative;
+      }
+      .login-help {
+        max-width: 648px;
+        width: 100%;
+        top: 21px;
+        font-size: 21px;
+        color: #b5b5c3;
+        font-weight: bold;
+        text-align: right;
+        position: absolute;
+      }
+      .login-acc {
+        font-size: 50px;
+        font-weight: bold;
+      }
+      .login-quick {
+        font-size: 30px;
+        color: #b5b5c3;
+        font-weight: bold;
+        padding-bottom: 40px;
+      }
+      .category {
+        font-weight: bold;
+        font-size: 19px;
+        padding-top: 30px;
+      }
+      input {
+        width: 640px;
+        line-height: 60px;
+        border-radius: 12px;
+        border-style: none;
+        color: #3f4254;
+        background-color: #ffffff;
+        padding-left: 33px;
+      }
+      input:focus {
+        box-shadow: none;
+        border-style: none;
+      }
+      .button {
+        max-width: 648px;
+        width: 100%;
+        position: absolute;
+        text-align: right;
+        padding-top: 20px;
+      }
+      button {
+        font-size: 19px;
+        color: #ffffff;
+        background-color: #187de4;
+        border-color: #187de4;
+        border-radius: 8px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      a {
+        text-decoration: none;
+        color: #0073e9;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <div class="info">
+        <div>
+          <img
+            src="https://preview.keenthemes.com/metronic/theme/html/demo1/dist/assets/media/logos/logo-1.png"
+          />
+        </div>
+        <div class="info-steps">
+          <div>
+            <span class="number-1">1</span>
+            <span class="text"> Account Settings</span>
+            <div class="sub">Setup Your Account Details</div>
+          </div>
+          <div>
+            <span class="number">2</span>
+            <span class="text"> Address Details</span>
+            <div class="sub">Setup Residence Address</div>
+          </div>
+          <div>
+            <span class="number">3</span>
+            <span class="text">Make Payment</span>
+            <div class="sub">Use Credit or Debit Cards</div>
+          </div>
+          <div>
+            <span class="number">4</span>
+            <span class="text">Completed!</span>
+            <div class="sub">Review and Submit</div>
+          </div>
+        </div>
+      </div>
+      <div class="login">
+        <div class="login-help">Having issues? <a href="/"> Get Help</a></div>
+        <div class="login-acc">Create Account</div>
+        <div class="login-quick">
+          Already have an Account ? <a href="">Sign In</a>
+        </div>
+        <form>
+          <div class="category">
+            <label>
+              <div>First Name</div>
+              <input />
+            </label>
+          </div>
+          <div class="category">
+            <label>
+              <div>Last Name</div>
+              <input />
+            </label>
+          </div>
+          <div class="category">
+            <label>
+              <div>Phone</div>
+              <input />
+            </label>
+          </div>
+          <div class="button"><button>Next Step</button></div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

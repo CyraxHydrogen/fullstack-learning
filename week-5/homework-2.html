@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Homework 2</title>
+    <style>
+      body {
+        display: block;
+        margin: 8px;
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 20px;
+        line-height: 1.5;
+      }
+      .content {
+        width: 450px;
+        margin: 50px auto;
+        padding: 30px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+      .age-content {
+        width: 150px;
+      }
+      div {
+        margin-bottom: 15px;
+      }
+      .summary-result {
+        background-color: lightseagreen;
+        font-size: 30px;
+        padding: 10px;
+        text-align: center;
+      }
+      button {
+        margin-top: 20px;
+        border: none;
+        background-color: crimson;
+        color: #fff;
+        font-size: 24px;
+        width: 100%;
+        height: 50px;
+      }
+      input {
+        width: 100%;
+        border: 1px solid #666;
+        border-radius: 20px;
+        height: 40px;
+        text-indent: 14px;
+        font-size: 28px;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <form>
+        <div>
+          <label
+            >First Name
+            <input
+              class="firstname-content"
+              type="text"
+              name="firstname"
+              max="100"
+            />
+          </label>
+        </div>
+        <div>
+          <label
+            >Last Name
+            <input
+              class="lastname-content"
+              tpye="text"
+              name="lastname"
+              max="100"
+            />
+          </label>
+        </div>
+        <div class="age-content">
+          <label
+            >Age
+            <input
+              class="age-number"
+              type="number"
+              name="age"
+              min="1"
+              max="140"
+            />
+          </label>
+        </div>
+      </form>
+      <div class="summary-result"></div>
+      <button>Create a Summary</button>
+      <script>
+        function createSummary(firstname, lastname, age) {
+          let summary = `Hello, my name is ${firstname} ${lastname}. I am ${age} years old!`;
+          return summary;
+        }
+        let button = document.querySelector('button');
+        let firstnameInput = document.querySelector('.firstname-content');
+        let lastnameInput = document.querySelector('.lastname-content');
+        let ageInput = document.querySelector('.age-number');
+        let summaryResult = document.querySelector('.summary-result');
+
+        button.addEventListener('click', function () {
+          let firstname = firstnameInput.value;
+          let lastname = lastnameInput.value;
+          let age = ageInput.value;
+          let summary = createSummary(firstname, lastname, age);
+
+          summaryResult.textContent = summary;
+        });
+      </script>
+    </div>
+  </body>
+</html>

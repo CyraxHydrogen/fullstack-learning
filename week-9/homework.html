@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Homework</title>
+    <style>
+      .content {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+      }
+      .application {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 25px;
+      }
+      img {
+        width: 23px;
+        padding: 29px;
+      }
+      a {
+        text-decoration: none;
+      }
+      .name {
+        display: flex;
+        align-items: center;
+      }
+      .icons {
+        display: flex;
+      }
+      .apps {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 5px;
+      }
+      .parts {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 25px;
+        border-top: solid rgb(221, 218, 218);
+        border-bottom: solid rgb(221, 218, 218);
+      }
+      .login {
+        color: #202024;
+        padding: 0 25px;
+        padding-top: 50px;
+      }
+      ul {
+        display: flex;
+        list-style: none;
+      }
+      ul li {
+        margin-right: 10px;
+      }
+      .action {
+        display: flex;
+        gap: 5px;
+      }
+      .action-button {
+        color: #3699ff;
+        background-color: #e1f0ff;
+        border-color: transparent;
+        padding: 0.55rem 0.75rem;
+        font-size: 0.925rem;
+        line-height: 1.35;
+        border-radius: 0.42rem;
+      }
+      .plus-button {
+        background-color: rgb(14, 236, 188);
+        border: 1px solid transparent;
+        padding: 0.65rem 1rem;
+        font-size: 1rem;
+        line-height: 1.5;
+        border-radius: 0.42rem;
+      }
+      .box {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 10px;
+        flex: 0 0 calc(50% - 0.25rem);
+        width: calc(50% - 0.25rem);
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+        margin-bottom: 0.5rem;
+        cursor: pointer;
+        background-color: #f3f6f9;
+      }
+      .login-part-1 {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        justify-content: space-between;
+      }
+      .login-steps {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 10px;
+        flex: 0 0 calc(50% - 0.25rem);
+        width: calc(50% - 0.25rem);
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+        margin-bottom: 0.5rem;
+        cursor: pointer;
+        background-color: #f3f6f9;
+        margin-left: 20px;
+      }
+      .login-no {
+        font-size: 45px;
+        border: 0 cap;
+        border-radius: 10px;
+        padding: 5px 10px 5px 10px;
+        background-color: rgba(54, 153, 255, 0.08);
+        color: #3699ff;
+      }
+      div .number-1 {
+        color: #ffffff;
+        background-color: #3699ff;
+      }
+      .login-number-1 {
+        color: #3699ff;
+        font-weight: bold;
+      }
+      .login-content {
+        font-weight: bold;
+      }
+      form {
+        background-color: white;
+        margin: 10px;
+      }
+      .login-part-2 {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+      .row {
+        display: flex;
+        margin-right: 31.5px;
+        margin-left: -17.5px;
+        flex-direction: row;
+      }
+      input {
+        width: 100%;
+        height: calc(1.5em + 1.65rem + 2px);
+        padding: -0.175rem 0.58rem;
+        font-size: 1.08rem;
+        line-height: 1.5;
+        border-radius: 0.42rem;
+        background-color: #e4e6ef;
+        border: 0;
+      }
+      .last-row {
+        flex: 0 0 50%;
+        max-width: 50%;
+        position: relative;
+        width: 100%;
+        padding-right: 12.5px;
+        padding-left: 12.5px;
+      }
+      .title {
+        margin-bottom: 30px;
+        margin-top: 50px;
+      }
+      .login-form-title {
+        margin-top: 20px;
+      }
+
+      .button {
+        border-top: solid rgb(221, 218, 218);
+        margin-top: 40px;
+        text-align: right;
+      }
+      button {
+        margin-top: 20px;
+        color: #ffffff;
+        background-color: #3699ff;
+        border-color: #3699ff;
+        padding: 15px 25px 15px 25px;
+        font-size: 1rem;
+        border-radius: 10px;
+      }
+      .condition {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 15px;
+        border-top: 0 solid;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <div class="application">
+        <div class="apps">
+          <span><a href="/">Pages</a></span>
+          <span><a href="/">Features</a></span>
+          <span><a href="/">Apps</a></span>
+        </div>
+        <div class="icons">
+          <div>
+            <a href="/"
+              ><img
+                src="https://www.svgrepo.com/show/425208/search-find-ecommerce.svg"
+            /></a>
+          </div>
+          <div>
+            <a href="/">
+              <img src="https://www.svgrepo.com/show/191512/right-indent.svg" />
+            </a>
+          </div>
+          <div>
+            <a href="/">
+              <img src="https://www.svgrepo.com/show/141491/equalizer.svg" />
+            </a>
+          </div>
+          <div>
+            <a href="/">
+              <img src="https://www.svgrepo.com/show/468197/cart.svg" />
+            </a>
+          </div>
+          <div>
+            <a href="/">
+              <img
+                src="https://www.svgrepo.com/show/422307/apps-layout-home.svg"
+              />
+            </a>
+          </div>
+          <div>
+            <a href="/">
+              <img
+                src="https://www.svgrepo.com/show/226408/group-multiple-users.svg"
+              />
+            </a>
+          </div>
+          <div>
+            <a href="/">
+              <img src="https://www.svgrepo.com/show/365950/usa.svg" />
+            </a>
+          </div>
+          <div class="name">
+            <span> <a href="/">Hi, Sean</a></span>
+            <span>
+              <a href="/">
+                <img src="https://www.svgrepo.com/show/402071/letter-s.svg" />
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="parts">
+        <div>
+          <ul>
+            <li>Wizard 4</li>
+            <li><a href="/">Pages</a></li>
+            <li><a href="/">Wizard 4</a></li>
+          </ul>
+        </div>
+        <div class="action">
+          <div><a class="action-button" href="/">Actions</a></div>
+          <div><a class="plus-button" href="/">+</a></div>
+        </div>
+      </div>
+      <div class="login">
+        <div class="login-part-1">
+          <div class="box">
+            <div class="login-steps" class="special">
+              <div class="login-no" class="number-1">1</div>
+              <div>
+                <div class="login-number-1">Add Account</div>
+                <div>Create Custom Account</div>
+              </div>
+            </div>
+          </div>
+          <div class="box">
+            <div class="login-steps">
+              <div class="login-no">2</div>
+              <div>
+                <div class="login-content">Your Address</div>
+                <div>Setup Your Address</div>
+              </div>
+            </div>
+          </div>
+          <div class="box">
+            <div class="login-steps">
+              <div class="login-no">3</div>
+              <div>
+                <div class="login-content">Make Payment</div>
+                <div>Add Payment Options</div>
+              </div>
+            </div>
+          </div>
+          <div class="box">
+            <div class="login-steps">
+              <div class="login-no">4</div>
+              <div>
+                <div class="login-content">Completed</div>
+                <div>Review and Submit</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="login-part-2">
+          <form>
+            <div class="title">Enter your Account Details</div>
+            <div>
+              <label>
+                <div class="login-form-title">First Name</div>
+                <input />
+                <div>Please enter your first name.</div>
+              </label>
+              <div>
+                <label>
+                  <div class="login-form-title">Last Name</div>
+                  <input />
+                  <div>Please enter your last name.</div>
+                </label>
+              </div>
+              <div class="row">
+                <div class="last-row">
+                  <label>
+                    <div class="login-form-title">Phone</div>
+                    <input class="input" />
+                    <div>Please enter your phone number.</div>
+                  </label>
+                </div>
+                <div class="last-row">
+                  <label>
+                    <div class="login-form-title">Email</div>
+                    <input class="input" />
+                    <div>Please enter your email address.</div>
+                  </label>
+                </div>
+              </div>
+              <div class="button">
+                <button>Next</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="condition">
+        <div>
+          <span><a href="/">About</a></span>
+          <span><a href="/">Team</a></span>
+          <span><a href="/">Contact</a></span>
+        </div>
+        <div>
+          <span>2024©</span>
+
+          <span><a href="/"> Keenthemes</a></span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Homework-week-10</title>
+    <style>
+      .icon {
+        height: 26px;
+        width: 26px;
+      }
+      body {
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+        font-size: 13px;
+        font-weight: 400;
+        font-family: Poppins, Helvetica, 'sans-serif';
+        background: #eef0f8;
+        display: flex;
+        flex-direction: column;
+        color: #3f4254;
+      }
+      .features {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: white;
+      }
+      .categories {
+        margin: 30px;
+      }
+      .feature-icon {
+        margin: 30px;
+      }
+      .gap {
+        margin-right: 20px;
+      }
+      .profile {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: white;
+      }
+      .profile-order {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+      li {
+        display: inline-block;
+        margin-right: 10px;
+      }
+      .action {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-right: 25px;
+      }
+      .button-action {
+        color: #3699ff;
+        background-color: #e1f0ff;
+        border-color: transparent;
+        cursor: pointer;
+        padding: -0.45rem 0.75rem;
+        font-size: 0.925rem;
+        line-height: 1.35;
+        border-radius: 0.42rem;
+        font-weight: bold;
+      }
+      .button-action:hover {
+        color: #ffffff;
+        background-color: #3699ff;
+        border-color: transparent;
+      }
+      a:hover {
+        background-color: #f3f6f9;
+        color: #3699ff;
+      }
+      .chat-button {
+        color: #ffffff;
+        background-color: #3699ff;
+        border-color: #3699ff;
+        cursor: pointer;
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+        padding-bottom: 0.5rem;
+        padding-top: 0.5rem;
+        font-size: 0.925rem;
+        line-height: 1.35;
+        border-radius: 0.42rem;
+        font-weight: bold;
+      }
+      .chat-button:hover {
+        color: #ffffff;
+        background-color: #187de4;
+        border-color: #187de4;
+      }
+      .follow-button {
+        cursor: pointer;
+        color: #ffffff;
+        background-color: #1bc5bd;
+        border-color: #1bc5bd;
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        font-size: 0.925rem;
+        line-height: 1.35;
+        border-radius: 0.42rem;
+        font-weight: bold;
+      }
+      .follow-button:hover {
+        color: #ffffff;
+        background-color: #0bb7af;
+        border-color: #0bb7af;
+      }
+      .save-button {
+        cursor: pointer;
+        color: #ffffff;
+        background-color: #1bc5bd;
+        border-color: #1bc5bd;
+        border: 1px solid transparent;
+        padding: 7px 1rem;
+        font-size: 1rem;
+        line-height: 1.5;
+        border-radius: 0.42rem;
+      }
+      .save-button:hover {
+        color: #ffffff;
+        background-color: #0bb7af;
+        border-color: #0bb7af;
+      }
+      .cancel-button {
+        cursor: pointer;
+        color: #3f4254;
+        background-color: #e4e6ef;
+        border-color: #e4e6ef;
+        border: 1px solid transparent;
+        padding: 7px 1rem;
+        font-size: 1rem;
+        line-height: 1.5;
+        border-radius: 0.42rem;
+      }
+      .cancel-button:hover {
+        color: #3f4254;
+        background-color: #d7dae7;
+        border-color: #d7dae7;
+      }
+      .plus {
+        height: 26px;
+        width: 26px;
+      }
+      .general-info {
+        background-color: white;
+        width: 350px;
+        padding-left: 50px;
+        padding-right: 50px;
+      }
+
+      .personal-info {
+        display: flex;
+        flex-direction: row;
+        padding: 2rem 2.25rem;
+      }
+      .digital-info {
+        background-image: url(https://preview.keenthemes.com/metronic/theme/html/demo1/dist/assets/media/users/300_21.jpg);
+        background-size: cover;
+        background-position: top;
+        background-repeat: no-repeat;
+        width: 78px;
+        height: 78px;
+        position: absolute;
+        top: 195px;
+        left: 85px;
+      }
+      .bold {
+        font-weight: bold;
+        font-size: 22px;
+      }
+      .occupation {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-left: 50px;
+      }
+      input {
+        border: none;
+      }
+      .form {
+        margin-top: 40px;
+        margin-bottom: 20px;
+      }
+      .form-label {
+        padding-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .steps {
+        display: flex;
+        flex-direction: column;
+      }
+      .boxes {
+        border-radius: 0.42rem;
+        color: #3f4254;
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+        padding: 0.75rem 1.5rem;
+        align-items: center;
+        cursor: pointer;
+      }
+      a {
+        text-decoration: none;
+        color: #3f4254;
+      }
+      .boxes:hover {
+        background-color: #f3f6f9;
+        color: #3699ff;
+      }
+      .fill-in-info {
+        display: flex;
+        flex-direction: column;
+        margin-left: 50px;
+        background-color: white;
+        padding-right: 100px;
+        padding-bottom: 60px;
+      }
+      .info-changes {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        background-color: white;
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+      .james {
+        background-image: url(https://preview.keenthemes.com/metronic/theme/html/demo1/dist/assets/media/users/300_21.jpg);
+        background-size: cover;
+        background-position: top;
+        background-repeat: no-repeat;
+        width: 120px;
+        height: 120px;
+        border-radius: 0.42rem;
+        margin-left: 260px;
+      }
+      .right-context {
+        margin-left: 260px;
+      }
+      input.right-context {
+        padding: 0.825rem 1.42rem;
+        font-size: 1.08rem;
+        line-height: 1.5;
+        border-radius: 0.42rem;
+        width: 50%;
+        background-color: #f3f6f9;
+      }
+      .left-context {
+        padding-left: 50px;
+        text-align: left;
+      }
+      .contact-info {
+        font-weight: bold;
+      }
+      .second-half {
+        margin-top: 40px;
+      }
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+      .dropdown a:hover {
+        background-color: #ddd;
+      }
+
+      .show {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <div class="features">
+        <div class="categories">
+          <span class="gap"><a href="/">Pages</a></span>
+          <span class="gap"><a href="/">Features</a></span>
+          <span class="gap"><a href="/">Apps</a></span>
+        </div>
+        <div class="feature-icon">
+          <span class="gap">
+            <a href="/"
+              ><img
+                class="icon"
+                src="https://www.svgrepo.com/show/499761/search.svg"
+            /></a>
+          </span>
+          <span class="gap">
+            <a href="/"
+              ><img
+                class="icon"
+                src="https://www.svgrepo.com/show/530666/gene-sequence.svg"
+            /></a>
+          </span>
+          <span class="gap">
+            <a href="/"
+              ><img
+                class="icon"
+                src="https://www.svgrepo.com/show/141491/equalizer.svg"
+            /></a>
+          </span>
+          <span class="gap">
+            <a href="/"
+              ><img
+                class="icon"
+                src="https://www.svgrepo.com/show/444569/shopping-cart.svg"
+            /></a>
+          </span>
+          <span class="gap">
+            <a href="/"
+              ><img
+                class="icon"
+                src="https://www.svgrepo.com/show/381941/widget-layout-page-paper-office.svg"
+            /></a>
+          </span>
+          <span class="gap">
+            <a href="/"
+              ><img
+                class="icon"
+                src="https://www.svgrepo.com/show/387216/communication.svg"
+            /></a>
+          </span>
+          <span class="gap">
+            <a href="/"
+              ><img
+                class="icon"
+                src="https://www.svgrepo.com/show/508668/flag-us.svg"
+            /></a>
+          </span>
+          <span class="name">
+            <span
+              ><a href="/">
+                <span>Hi,</span>
+                <span>Sean</span>
+                <span>S</span></a
+              ></span
+            >
+          </span>
+        </div>
+      </div>
+      <div class="profile">
+        <div class="profile-order">
+          <div class="bold"><a href="/">Profile 1</a></div>
+          <ul>
+            <li><a href="/">Apps</a></li>
+            <li><a href="/">Profile</a></li>
+            <li><a href="/">Profile 1</a></li>
+            <li><a href="/">Personal information</a></li>
+          </ul>
+        </div>
+        <div class="action">
+          <button class="button-action">Actions</button>
+          <span
+            ><img
+              class="plus"
+              src="https://www.svgrepo.com/show/387601/folder-plus.svg"
+          /></span>
+        </div>
+      </div>
+      <div class="personal-info">
+        <div class="general-info">
+          <div class="dropdown open">
+            <button class="dropdown-button">
+              ><img
+                class="icon"
+                class="more"
+                src="https://www.svgrepo.com/show/511076/more-horizontal.svg"
+              />
+            </button>
+            <div class="dropdown-content">
+              <ul>
+                <li>
+                  <a href="/"
+                    ><img
+                      src="https://www.svgrepo.com/show/491975/water-fee.svg"
+                    />New Group</a
+                  >
+                </li>
+                <li>
+                  <a href="/"
+                    ><img
+                      src="https://www.svgrepo.com/show/514088/contacts.svg"
+                    />Contacts</a
+                  >
+                </li>
+                <li>
+                  <a href="/"
+                    ><img
+                      src="https://www.svgrepo.com/show/509212/rocket.svg"
+                    />Groups</a
+                  >
+                </li>
+                <li>
+                  <a href="/"
+                    ><img
+                      src="https://www.svgrepo.com/show/521509/bell-ringing.svg"
+                    />Call</a
+                  >
+                </li>
+                <li>
+                  <a href="/"
+                    ><img
+                      src="https://www.svgrepo.com/show/520935/setting-5.svg"
+                    />Settings</a
+                  >
+                </li>
+                <li>
+                  <a href="/"
+                    ><img
+                      src="https://www.svgrepo.com/show/451662/help-about.svg"
+                    />Help</a
+                  >
+                </li>
+                <li>
+                  <a href="/"
+                    ><img
+                      src="https://www.svgrepo.com/show/447467/privacy.svg"
+                    />Privacy</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="digital-info"></div>
+          <div class="occupation">
+            <div class="bold">James Jones</div>
+            <div>Application Developer</div>
+            <div>
+              <span><button class="chat-button">Chat</button></span>
+              <span><button class="follow-button">Follow</button></span>
+            </div>
+          </div>
+          <div class="form">
+            <form>
+              <div class="form-label">
+                <label>Email</label>
+                <span><a href="/">matt@fifestudios.com</a></span>
+              </div>
+              <div class="form-label">
+                <label>Phone</label>
+                <span>44(76)34254578</span>
+              </div>
+              <div class="form-label">
+                <label>Location</label>
+                <span>Melbourne</span>
+              </div>
+            </form>
+          </div>
+          <div class="steps">
+            <div class="boxes">
+              <a href="/"
+                ><img
+                  class="icon"
+                  src="https://www.svgrepo.com/show/474430/overview.svg"
+                />Profile Overview</a
+              >
+            </div>
+            <div class="boxes">
+              <a href="/"
+                ><img
+                  class="icon"
+                  src="https://www.svgrepo.com/show/482953/personal-information-file-4.svg"
+                />Personal Information</a
+              >
+            </div>
+            <div class="boxes">
+              <a href="/"
+                ><img
+                  class="icon"
+                  src="https://www.svgrepo.com/show/530666/gene-sequence.svg"
+                />Account Information</a
+              >
+            </div>
+            <div class="boxes">
+              <a href="/"
+                ><img
+                  class="icon"
+                  src="https://www.svgrepo.com/show/265304/password.svg"
+                />Change Password</a
+              >
+            </div>
+            <div class="boxes">
+              <a href="/"
+                ><img
+                  class="icon"
+                  src="https://www.svgrepo.com/show/439750/email.svg"
+                />Email Settings</a
+              >
+            </div>
+            <div class="boxes">
+              <a href="/"
+                ><img
+                  class="icon"
+                  src="https://www.svgrepo.com/show/513398/credit-card.svg"
+                />Saved Credit Cards</a
+              >
+            </div>
+            <div class="boxes">
+              <a href="/"
+                ><img
+                  class="icon"
+                  src="https://www.svgrepo.com/show/84748/task.svg"
+                />Tax Information</a
+              >
+            </div>
+            <div class="boxes">
+              <a href="/"
+                ><img
+                  class="icon"
+                  src="https://www.svgrepo.com/show/355883/receipt.svg"
+                />Statements</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="fill-in-info">
+          <div class="info-changes">
+            <div>
+              <div class="left-context bold">Personal Information</div>
+              <div class="left-context">Update your personal informaiton</div>
+            </div>
+            <div>
+              <button class="save-button">Save Changes</button>
+              <span><button class="cancel-button">Cancel</button></span>
+            </div>
+          </div>
+          <div class="customer-info">
+            <form>
+              <div>
+                <div class="right-context bold">Customer info</div>
+                <label class="left-context">Avatar</label>
+                <div class="james" class="right-context"></div>
+              </div>
+              <div class="row">
+                <label class="left-context">First Name</label>
+                <input class="right-context" />
+              </div>
+              <div>
+                <label class="left-context">Last Name</label>
+                <input class="right-context" />
+              </div>
+              <div>
+                <label class="left-context">Company Name</label>
+                <div>
+                  <input class="right-context" />
+                  <div class="right-context">
+                    If you want your invoices addressed to a company. Leave
+                    blank to use your full name.
+                  </div>
+                </div>
+              </div>
+              <div class="second-half">
+                <div class="right-context bold">Contact Info</div>
+                <label class="left-context">Contact Phone</label>
+                <input class="right-context" />
+                <div class="right-context">
+                  We'll never share your email with anyone else.
+                </div>
+              </div>
+              <div>
+                <label class="left-context">Email Address</label>
+                <input class="right-context" />
+              </div>
+              <div>
+                <label class="left-context">Company Site</label>
+                <input class="right-context" />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="t-and-c"></div>
+    </div>
+    <script>
+      let dropdown = document.querySelector('.dropdown');
+      let dropdownButton = document.querySelector('.dropdown-button');
+      let dropdownButtonClick = function () {
+        if (dropdownButton.classList.add('open'));
+        {
+          dropdownButton.classList.remove('open');
+        }else{
+          dropdownButton.classList.add('open')
+        }
+      };
+
+      dropdownButton.addEventListener('click', dropdownButtonClick);
+    </script>
+  </body>
+</html>

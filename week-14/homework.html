@@ -1,0 +1,873 @@
+<html>
+  <head>
+    <title>My Anime Vault</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container mt-3">
+      <nav
+        class="shadow-sm p-3 mb-5 bg-body-tertiary navbar rounded position-sticky z-1 top-0"
+      >
+        <div>
+          <a class="navbar-brand" href="home.html">My Anime Vault</a>
+        </div>
+
+        <select class="form-select w-auto" data-component="filter">
+          <option selected="" value="top">Top anime</option>
+          <option value="1">Action (5111)</option>
+          <option value="2">Adventure (4050)</option>
+          <option value="5">Avant Garde (892)</option>
+          <option value="46">Award Winning (248)</option>
+          <option value="28">Boys Love (178)</option>
+          <option value="4">Comedy (7307)</option>
+          <option value="8">Drama (2914)</option>
+          <option value="10">Fantasy (5758)</option>
+          <option value="26">Girls Love (109)</option>
+          <option value="47">Gourmet (177)</option>
+          <option value="14">Horror (556)</option>
+          <option value="7">Mystery (917)</option>
+          <option value="22">Romance (2016)</option>
+          <option value="24">Sci-Fi (3260)</option>
+          <option value="36">Slice of Life (1631)</option>
+          <option value="30">Sports (764)</option>
+          <option value="37">Supernatural (1505)</option>
+          <option value="41">Suspense (387)</option>
+          <option value="9">Ecchi (806)</option>
+          <option value="49">Erotica (73)</option>
+          <option value="12">Hentai (1524)</option>
+          <option value="50">Adult Cast (615)</option>
+          <option value="51">Anthropomorphic (1000)</option>
+          <option value="52">CGDCT (245)</option>
+          <option value="53">Childcare (69)</option>
+          <option value="54">Combat Sports (91)</option>
+          <option value="81">Crossdressing (50)</option>
+          <option value="55">Delinquents (71)</option>
+          <option value="39">Detective (304)</option>
+          <option value="56">Educational (279)</option>
+          <option value="57">Gag Humor (245)</option>
+          <option value="58">Gore (258)</option>
+          <option value="35">Harem (472)</option>
+          <option value="59">High Stakes Game (50)</option>
+          <option value="13">Historical (1563)</option>
+          <option value="60">Idols (Female) (321)</option>
+          <option value="61">Idols (Male) (176)</option>
+          <option value="62">Isekai (363)</option>
+          <option value="63">Iyashikei (173)</option>
+          <option value="64">Love Polygon (97)</option>
+          <option value="65">Magical Sex Shift (30)</option>
+          <option value="66">Mahou Shoujo (336)</option>
+          <option value="17">Martial Arts (626)</option>
+          <option value="18">Mecha (1264)</option>
+          <option value="67">Medical (49)</option>
+          <option value="38">Military (712)</option>
+          <option value="19">Music (4433)</option>
+          <option value="6">Mythology (655)</option>
+          <option value="68">Organized Crime (94)</option>
+          <option value="69">Otaku Culture (103)</option>
+          <option value="20">Parody (770)</option>
+          <option value="70">Performing Arts (116)</option>
+          <option value="71">Pets (121)</option>
+          <option value="40">Psychological (426)</option>
+          <option value="3">Racing (254)</option>
+          <option value="72">Reincarnation (133)</option>
+          <option value="73">Reverse Harem (77)</option>
+          <option value="74">Romantic Subtext (53)</option>
+          <option value="21">Samurai (238)</option>
+          <option value="23">School (2067)</option>
+          <option value="75">Showbiz (43)</option>
+          <option value="29">Space (632)</option>
+          <option value="11">Strategy Game (329)</option>
+          <option value="31">Super Power (715)</option>
+          <option value="76">Survival (73)</option>
+          <option value="77">Team Sports (309)</option>
+          <option value="78">Time Travel (140)</option>
+          <option value="32">Vampire (168)</option>
+          <option value="79">Video Game (150)</option>
+          <option value="80">Visual Arts (91)</option>
+          <option value="48">Workplace (201)</option>
+          <option value="43">Josei (153)</option>
+          <option value="15">Kids (6490)</option>
+          <option value="42">Seinen (1013)</option>
+          <option value="25">Shoujo (489)</option>
+          <option value="27">Shounen (1958)</option>
+        </select>
+      </nav>
+      <div class="mb-5 d-flex justify-content-center">
+        <button
+          type="button"
+          class="btn btn-outline-secondary rounded-0"
+          data-component="pagination:previous"
+        >
+          <i class="bi bi-chevron-left"></i> Prev
+        </button>
+        <select
+          type="button"
+          class="form-select w-auto border-secondary border-end-0 border-start-0 rounded-0"
+          data-component="pagination:select"
+        >
+          <option selected="" value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15</option>
+          <option value="16">16</option>
+          <option value="17">17</option>
+          <option value="18">18</option>
+          <option value="19">19</option>
+          <option value="20">20</option>
+          <option value="21">21</option>
+          <option value="22">22</option>
+          <option value="23">23</option>
+          <option value="24">24</option>
+          <option value="25">25</option>
+        </select>
+        <button
+          type="button"
+          class="btn btn-outline-secondary rounded-0"
+          data-component="pagination:next"
+        >
+          Next <i class="bi bi-chevron-right"></i>
+        </button>
+      </div>
+      <div
+        class="d-flex mt-5 justify-content-center align-items-center gap-2 d-none"
+        data-component="loader"
+      >
+        <span class="spinner-border text-primary"></span>
+        <span>Loading...</span>
+      </div>
+      <div class="row mt-5" data-component="list">
+        <div
+          class="col-6 col-md-3 mb-5 text-center"
+          title="Frieren: Beyond Journey's End"
+        >
+          <a
+            href="details?id=52991"
+            class="link-primary d-block position-relative text-decoration-none"
+            data-component="item"
+          >
+            <span class="position-absolute badge bg-danger top-0 end-0">
+              <i class="bi bi-star-fill"></i> 9.37
+            </span>
+            <span class="d-flex flex-column justify-content-center">
+              <img
+                class="rounded shadow"
+                src="https://cdn.myanimelist.net/images/anime/1015/138006l.jpg"
+                data-component="image"
+              />
+              <span class="text-dark mt-2" data-component="title"
+                >Frieren: Beyond Journey's End</span
+              >
+            </span>
+          </a>
+        </div>
+        <div
+          class="col-6 col-md-3 mb-5 text-center"
+          title="Fullmetal Alchemist: Brotherhood"
+        >
+          <a
+            href="details?id=5114"
+            class="link-primary d-block position-relative text-decoration-none"
+            data-component="item"
+          >
+            <span class="position-absolute badge bg-danger top-0 end-0">
+              <i class="bi bi-star-fill"></i> 9.09
+            </span>
+            <span class="d-flex flex-column justify-content-center">
+              <img
+                class="rounded shadow"
+                src="https://cdn.myanimelist.net/images/anime/1208/94745l.jpg"
+                data-component="image"
+              />
+              <span class="text-dark mt-2" data-component="title"
+                >Fullmetal Alchemist: Brotherhood</span
+              >
+            </span>
+          </a>
+        </div>
+        <div class="col-6 col-md-3 mb-5 text-center" title="Steins;Gate">
+          <a
+            href="details?id=9253"
+            class="link-primary d-block position-relative text-decoration-none"
+            data-component="item"
+          >
+            <span class="position-absolute badge bg-danger top-0 end-0">
+              <i class="bi bi-star-fill"></i> 9.07
+            </span>
+            <span class="d-flex flex-column justify-content-center">
+              <img
+                class="rounded shadow"
+                src="https://cdn.myanimelist.net/images/anime/1935/127974l.jpg"
+                data-component="image"
+              />
+              <span class="text-dark mt-2" data-component="title"
+                >Steins;Gate</span
+              >
+            </span>
+          </a>
+        </div>
+        <div class="col-6 col-md-3 mb-5 text-center" title="Gintama Season 4">
+          <a
+            href="details?id=28977"
+            class="link-primary d-block position-relative text-decoration-none"
+            data-component="item"
+          >
+            <span class="position-absolute badge bg-danger top-0 end-0">
+              <i class="bi bi-star-fill"></i> 9.06
+            </span>
+            <span class="d-flex flex-column justify-content-center">
+              <img
+                class="rounded shadow"
+                src="https://cdn.myanimelist.net/images/anime/3/72078l.jpg"
+                data-component="image"
+              />
+              <span class="text-dark mt-2" data-component="title"
+                >Gintama Season 4</span
+              >
+            </span>
+          </a>
+        </div>
+        <div
+          class="col-6 col-md-3 mb-5 text-center"
+          title="Attack on Titan Season 3 Part 2"
+        >
+          <a
+            href="details?id=38524"
+            class="link-primary d-block position-relative text-decoration-none"
+            data-component="item"
+          >
+            <span class="position-absolute badge bg-danger top-0 end-0">
+              <i class="bi bi-star-fill"></i> 9.05
+            </span>
+            <span class="d-flex flex-column justify-content-center">
+              <img
+                class="rounded shadow"
+                src="https://cdn.myanimelist.net/images/anime/1517/100633l.jpg"
+                data-component="image"
+              />
+              <span class="text-dark mt-2" data-component="title"
+                >Attack on Titan Season 3 Part 2</span
+              >
+            </span>
+          </a>
+        </div>
+        <div
+          class="col-6 col-md-3 mb-5 text-center"
+          title="Gintama: The Very Final"
+        >
+          <a
+            href="details?id=39486"
+            class="link-primary d-block position-relative text-decoration-none"
+            data-component="item"
+          >
+            <span class="position-absolute badge bg-danger top-0 end-0">
+              <i class="bi bi-star-fill"></i> 9.04
+            </span>
+            <span class="d-flex flex-column justify-content-center">
+              <img
+                class="rounded shadow"
+                src="https://cdn.myanimelist.net/images/anime/1245/116760l.jpg"
+                data-component="image"
+              />
+              <span class="text-dark mt-2" data-component="title"
+                >Gintama: The Very Final</span
+              >
+            </span>
+          </a>
+        </div>
+        <div class="col-6 col-md-3 mb-5 text-center" title="Hunter x Hunter">
+          <a
+            href="details?id=11061"
+            class="link-primary d-block position-relative text-decoration-none"
+            data-component="item"
+          >
+            <span class="position-absolute badge bg-danger top-0 end-0">
+              <i class="bi bi-star-fill"></i> 9.04
+            </span>
+            <span class="d-flex flex-column justify-content-center">
+              <img
+                class="rounded shadow"
+                src="https://cdn.myanimelist.net/images/anime/1337/99013l.jpg"
+                data-component="image"
+              />
+              <span class="text-dark mt-2" data-component="title"
+                >Hunter x Hunter</span
+              >
+            </span>
+          </a>
+        </div>
+        <div class="col-6 col-md-3 mb-5 text-center" title="Gintama Season 2">
+          <a
+            href="details?id=9969"
+            class="link-primary d-block position-relative text-decoration-none"
+            data-component="item"
+          >
+            <span class="position-absolute badge bg-danger top-0 end-0">
+              <i class="bi bi-star-fill"></i> 9.03
+            </span>
+            <span class="d-flex flex-column justify-content-center">
+              <img
+                class="rounded shadow"
+                src="https://cdn.myanimelist.net/images/anime/4/50361l.jpg"
+                data-component="image"
+              />
+              <span class="text-dark mt-2" data-component="title"
+                >Gintama Season 2</span
+              >
+            </span>
+          </a>
+        </div>
+        <div class="col-6 col-md-3 mb-5 text-center" title="Gintama: Enchousen">
+          <a
+            href="details?id=15417"
+            class="link-primary d-block position-relative text-decoration-none"
+            data-component="item"
+          >
+            <span class="position-absolute badge bg-danger top-0 end-0">
+              <i class="bi bi-star-fill"></i> 9.02
+            </span>
+            <span class="d-flex flex-column justify-content-center">
+              <img
+                class="rounded shadow"
+                src="https://cdn.myanimelist.net/images/anime/1452/123686l.jpg"
+                data-component="image"
+              />
+              <span class="text-dark mt-2" data-component="title"
+                >Gintama: Enchousen</span
+              >
+            </span>
+          </a>
+        </div>
+        <div
+          class="col-6 col-md-3 mb-5 text-center"
+          title="Legend of the Galactic Heroes"
+        >
+          <a
+            href="details?id=820"
+            class="link-primary d-block position-relative text-decoration-none"
+            data-component="item"
+          >
+            <span class="position-absolute badge bg-danger top-0 end-0">
+              <i class="bi bi-star-fill"></i> 9.02
+            </span>
+            <span class="d-flex flex-column justify-content-center">
+              <img
+                class="rounded shadow"
+                src="https://cdn.myanimelist.net/images/anime/1976/142016l.jpg"
+                data-component="image"
+              />
+              <span class="text-dark mt-2" data-component="title"
+                >Legend of the Galactic Heroes</span
+              >
+            </span>
+          </a>
+        </div>
+        <div
+          class="col-6 col-md-3 mb-5 text-center"
+          title="Bleach: Thousand-Year Blood War"
+        >
+          <a
+            href="details?id=41467"
+            class="link-primary d-block position-relative text-decoration-none"
+            data-component="item"
+          >
+            <span class="position-absolute badge bg-danger top-0 end-0">
+              <i class="bi bi-star-fill"></i> 9.02
+            </span>
+            <span class="d-flex flex-column justify-content-center">
+              <img
+                class="rounded shadow"
+                src="https://cdn.myanimelist.net/images/anime/1908/135431l.jpg"
+                data-component="image"
+              />
+              <span class="text-dark mt-2" data-component="title"
+                >Bleach: Thousand-Year Blood War</span
+              >
+            </span>
+          </a>
+        </div>
+        <div
+          class="col-6 col-md-3 mb-5 text-center"
+          title="Kaguya-sama: Love is War - Ultra Romantic"
+        >
+          <a
+            href="details?id=43608"
+            class="link-primary d-block position-relative text-decoration-none"
+            data-component="item"
+          >
+            <span class="position-absolute badge bg-danger top-0 end-0">
+              <i class="bi bi-star-fill"></i> 9.01
+            </span>
+            <span class="d-flex flex-column justify-content-center">
+              <img
+                class="rounded shadow"
+                src="https://cdn.myanimelist.net/images/anime/1160/122627l.jpg"
+                data-component="image"
+              />
+              <span class="text-dark mt-2" data-component="title"
+                >Kaguya-sama: Love is War - Ultra Romantic</span
+              >
+            </span>
+          </a>
+        </div>
+        <div class="col-6 col-md-3 mb-5 text-center" title="Gintama Season 5">
+          <a
+            href="details?id=34096"
+            class="link-primary d-block position-relative text-decoration-none"
+            data-component="item"
+          >
+            <span class="position-absolute badge bg-danger top-0 end-0">
+              <i class="bi bi-star-fill"></i> 8.98
+            </span>
+            <span class="d-flex flex-column justify-content-center">
+              <img
+                class="rounded shadow"
+                src="https://cdn.myanimelist.net/images/anime/3/83528l.jpg"
+                data-component="image"
+              />
+              <span class="text-dark mt-2" data-component="title"
+                >Gintama Season 5</span
+              >
+            </span>
+          </a>
+        </div>
+        <div
+          class="col-6 col-md-3 mb-5 text-center"
+          title="Fruits Basket: The Final Season"
+        >
+          <a
+            href="details?id=42938"
+            class="link-primary d-block position-relative text-decoration-none"
+            data-component="item"
+          >
+            <span class="position-absolute badge bg-danger top-0 end-0">
+              <i class="bi bi-star-fill"></i> 8.98
+            </span>
+            <span class="d-flex flex-column justify-content-center">
+              <img
+                class="rounded shadow"
+                src="https://cdn.myanimelist.net/images/anime/1085/114792l.jpg"
+                data-component="image"
+              />
+              <span class="text-dark mt-2" data-component="title"
+                >Fruits Basket: The Final Season</span
+              >
+            </span>
+          </a>
+        </div>
+        <div class="col-6 col-md-3 mb-5 text-center" title="Gintama">
+          <a
+            href="details?id=918"
+            class="link-primary d-block position-relative text-decoration-none"
+            data-component="item"
+          >
+            <span class="position-absolute badge bg-danger top-0 end-0">
+              <i class="bi bi-star-fill"></i> 8.94
+            </span>
+            <span class="d-flex flex-column justify-content-center">
+              <img
+                class="rounded shadow"
+                src="https://cdn.myanimelist.net/images/anime/10/73274l.jpg"
+                data-component="image"
+              />
+              <span class="text-dark mt-2" data-component="title">Gintama</span>
+            </span>
+          </a>
+        </div>
+        <div
+          class="col-6 col-md-3 mb-5 text-center"
+          title="Clannad: After Story"
+        >
+          <a
+            href="details?id=4181"
+            class="link-primary d-block position-relative text-decoration-none"
+            data-component="item"
+          >
+            <span class="position-absolute badge bg-danger top-0 end-0">
+              <i class="bi bi-star-fill"></i> 8.93
+            </span>
+            <span class="d-flex flex-column justify-content-center">
+              <img
+                class="rounded shadow"
+                src="https://cdn.myanimelist.net/images/anime/1299/110774l.jpg"
+                data-component="image"
+              />
+              <span class="text-dark mt-2" data-component="title"
+                >Clannad: After Story</span
+              >
+            </span>
+          </a>
+        </div>
+        <div class="col-6 col-md-3 mb-5 text-center" title="A Silent Voice">
+          <a
+            href="details?id=28851"
+            class="link-primary d-block position-relative text-decoration-none"
+            data-component="item"
+          >
+            <span class="position-absolute badge bg-danger top-0 end-0">
+              <i class="bi bi-star-fill"></i> 8.93
+            </span>
+            <span class="d-flex flex-column justify-content-center">
+              <img
+                class="rounded shadow"
+                src="https://cdn.myanimelist.net/images/anime/1122/96435l.jpg"
+                data-component="image"
+              />
+              <span class="text-dark mt-2" data-component="title"
+                >A Silent Voice</span
+              >
+            </span>
+          </a>
+        </div>
+        <div
+          class="col-6 col-md-3 mb-5 text-center"
+          title="The Apothecary Diaries"
+        >
+          <a
+            href="details?id=54492"
+            class="link-primary d-block position-relative text-decoration-none"
+            data-component="item"
+          >
+            <span class="position-absolute badge bg-danger top-0 end-0">
+              <i class="bi bi-star-fill"></i> 8.92
+            </span>
+            <span class="d-flex flex-column justify-content-center">
+              <img
+                class="rounded shadow"
+                src="https://cdn.myanimelist.net/images/anime/1708/138033l.jpg"
+                data-component="image"
+              />
+              <span class="text-dark mt-2" data-component="title"
+                >The Apothecary Diaries</span
+              >
+            </span>
+          </a>
+        </div>
+        <div
+          class="col-6 col-md-3 mb-5 text-center"
+          title="March Comes In Like a Lion 2nd Season"
+        >
+          <a
+            href="details?id=35180"
+            class="link-primary d-block position-relative text-decoration-none"
+            data-component="item"
+          >
+            <span class="position-absolute badge bg-danger top-0 end-0">
+              <i class="bi bi-star-fill"></i> 8.92
+            </span>
+            <span class="d-flex flex-column justify-content-center">
+              <img
+                class="rounded shadow"
+                src="https://cdn.myanimelist.net/images/anime/3/88469l.jpg"
+                data-component="image"
+              />
+              <span class="text-dark mt-2" data-component="title"
+                >March Comes In Like a Lion 2nd Season</span
+              >
+            </span>
+          </a>
+        </div>
+        <div
+          class="col-6 col-md-3 mb-5 text-center"
+          title="Gintama: The Movie: The Final Chapter: Be Forever Yorozuya"
+        >
+          <a
+            href="details?id=15335"
+            class="link-primary d-block position-relative text-decoration-none"
+            data-component="item"
+          >
+            <span class="position-absolute badge bg-danger top-0 end-0">
+              <i class="bi bi-star-fill"></i> 8.91
+            </span>
+            <span class="d-flex flex-column justify-content-center">
+              <img
+                class="rounded shadow"
+                src="https://cdn.myanimelist.net/images/anime/10/51723l.jpg"
+                data-component="image"
+              />
+              <span class="text-dark mt-2" data-component="title"
+                >Gintama: The Movie: The Final Chapter: Be Forever
+                Yorozuya</span
+              >
+            </span>
+          </a>
+        </div>
+        <div
+          class="col-6 col-md-3 mb-5 text-center"
+          title="Code Geass: Lelouch of the Rebellion R2"
+        >
+          <a
+            href="details?id=2904"
+            class="link-primary d-block position-relative text-decoration-none"
+            data-component="item"
+          >
+            <span class="position-absolute badge bg-danger top-0 end-0">
+              <i class="bi bi-star-fill"></i> 8.91
+            </span>
+            <span class="d-flex flex-column justify-content-center">
+              <img
+                class="rounded shadow"
+                src="https://cdn.myanimelist.net/images/anime/1088/135089l.jpg"
+                data-component="image"
+              />
+              <span class="text-dark mt-2" data-component="title"
+                >Code Geass: Lelouch of the Rebellion R2</span
+              >
+            </span>
+          </a>
+        </div>
+        <div
+          class="col-6 col-md-3 mb-5 text-center"
+          title="Attack on Titan: Final Season - The Final Chapters"
+        >
+          <a
+            href="details?id=51535"
+            class="link-primary d-block position-relative text-decoration-none"
+            data-component="item"
+          >
+            <span class="position-absolute badge bg-danger top-0 end-0">
+              <i class="bi bi-star-fill"></i> 8.9
+            </span>
+            <span class="d-flex flex-column justify-content-center">
+              <img
+                class="rounded shadow"
+                src="https://cdn.myanimelist.net/images/anime/1279/131078l.jpg"
+                data-component="image"
+              />
+              <span class="text-dark mt-2" data-component="title"
+                >Attack on Titan: Final Season - The Final Chapters</span
+              >
+            </span>
+          </a>
+        </div>
+        <div
+          class="col-6 col-md-3 mb-5 text-center"
+          title="The Dangers in My Heart Season 2"
+        >
+          <a
+            href="details?id=55690"
+            class="link-primary d-block position-relative text-decoration-none"
+            data-component="item"
+          >
+            <span class="position-absolute badge bg-danger top-0 end-0">
+              <i class="bi bi-star-fill"></i> 8.88
+            </span>
+            <span class="d-flex flex-column justify-content-center">
+              <img
+                class="rounded shadow"
+                src="https://cdn.myanimelist.net/images/anime/1643/138581l.jpg"
+                data-component="image"
+              />
+              <span class="text-dark mt-2" data-component="title"
+                >The Dangers in My Heart Season 2</span
+              >
+            </span>
+          </a>
+        </div>
+        <div
+          class="col-6 col-md-3 mb-5 text-center"
+          title="Gintama.: Silver Soul Arc - Second Half War"
+        >
+          <a
+            href="details?id=37491"
+            class="link-primary d-block position-relative text-decoration-none"
+            data-component="item"
+          >
+            <span class="position-absolute badge bg-danger top-0 end-0">
+              <i class="bi bi-star-fill"></i> 8.88
+            </span>
+            <span class="d-flex flex-column justify-content-center">
+              <img
+                class="rounded shadow"
+                src="https://cdn.myanimelist.net/images/anime/1776/96566l.jpg"
+                data-component="image"
+              />
+              <span class="text-dark mt-2" data-component="title"
+                >Gintama.: Silver Soul Arc - Second Half War</span
+              >
+            </span>
+          </a>
+        </div>
+        <div class="col-6 col-md-3 mb-5 text-center" title="Monster">
+          <a
+            href="details?id=19"
+            class="link-primary d-block position-relative text-decoration-none"
+            data-component="item"
+          >
+            <span class="position-absolute badge bg-danger top-0 end-0">
+              <i class="bi bi-star-fill"></i> 8.88
+            </span>
+            <span class="d-flex flex-column justify-content-center">
+              <img
+                class="rounded shadow"
+                src="https://cdn.myanimelist.net/images/anime/10/18793l.jpg"
+                data-component="image"
+              />
+              <span class="text-dark mt-2" data-component="title">Monster</span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <script src="js/home.js">
+            let listGroup = document.querySelector('[data-component="filter"]');
+            let previousButton = document.querySelector('[data-component="pagination:previous"]')
+            let nextButton = document.querySelector('[data-component="pagination:next"]')
+            let pageButton = document.querySelector('[data-component="pagination:select"]')
+
+
+            let currentFilterOption = '';
+      let Genres = function (result) {
+        let data = result.data;
+        let genreContent = '';
+
+        for (let i = 0; i < data.length; i++) {
+          let item = data[i];
+          let newGenreContent = `<option value="${item.mal_id}">${item.name} (${item.count})</option>`;
+
+          genreContent = genresContent + newGenreContent;
+        }
+
+        filterSelect.innerHTML = filterSelect.innerHTML + allGenresContent;
+      };
+      let genreList = function (result) {
+        let data = result.data;
+        let allNewItemsContent = '';
+
+        for (let i = 0; i < data.length; i++) {
+          let item = data[i];
+          let newItemContent = `
+              <div class="col-6 col-md-3 mb-5 text-center" title="${item.title_english}">
+                <a href="details?id=${item.mal_id}" class="link-primary d-block position-relative text-decoration-none" data-component="item">
+                  <span class="position-absolute badge bg-danger top-0 end-0">
+                      <i class="bi bi-star-fill"></i> ${item.score}
+                  </span>
+                  <span class="d-flex flex-column justify-content-center">
+                      <img class="rounded shadow" src="${item.images.jpg.large_image_url}" data-component="image" />
+                      <span class="text-dark mt-2" data-component="title">${item.title_english}</span>
+                  </span>
+                </a>
+              </div>`;
+
+          allNewItemsContent = allNewItemsContent + newItemContent;
+        }
+
+        list.innerHTML = allNewItemsContent;
+      };
+      let onFilterSelectChange = function () {
+        let selectedOption = filterSelect.value;
+
+        loadList(selectedOption);
+      };
+      let onPaginationSelectChange = function () {
+        let selectedPage = paginationSelect.value;
+
+        loadList(currentFilterOption, selectedPage);
+      };
+
+
+      let renderPagination = function (result) {
+        let pagination = result.pagination;
+        let paginationItems = pagination.items;
+        let paginationOptionsContent = '';
+
+        for (let i = 1; i <= paginationItems.count; i++) {
+          let itemContent = '';
+
+          if (i === 1) {
+            itemContent = `<option selected value="${i}">${i}</option>`;
+          } else {
+            itemContent = `<option value="${i}">${i}</option>`;
+          }
+
+          paginationOptionsContent = paginationOptionsContent + itemContent;
+        }
+
+        paginationSelect.innerHTML = paginationOptionsContent;
+      };
+      let loadList = function (filterOption, page) {
+        let requestUrl = 'https://api.jikan.moe/v4/';
+        let shouldRebuildPagination = false;
+
+
+        displayLoadingState();
+
+        fetch(requestUrl)
+          .then(function (response) {
+            return response.json();
+          })
+          .then(function (result) {
+            renderList(result);
+
+            if (shouldRebuildPagination) {
+              renderPagination(result);
+            }
+
+            removeLoadingState();
+          });
+      };
+      let nextPageClick = function () {
+        let selectedPage = paginationSelect.value;
+        let lastPage = paginationSelect.lastChild.value;
+
+        selectedPage = parseInt(selectedPage, 10);
+        lastPage = parseInt(lastPage, 10);
+
+        let nextPage = selectedPage + 1;
+
+        if (nextPage <= lastPage) {
+          paginationSelect.value = nextPage;
+          loadList(currentFilterOption, nextPage);
+        }
+      };
+      let onPaginationPrevClick = function () {
+        let selectedPage = paginationSelect.value;
+
+        selectedPage = parseInt(selectedPage, 10);
+
+        let previousPage = selectedPage - 1;
+
+        if (previousPage >= 1) {
+          paginationSelect.value = previousPage;
+          loadList(currentFilterOption, previousPage);
+        }
+      };
+
+      listGroup.addEventListener('change', onFilterSelectChange);
+      pageButton.addEventListener('change', onPaginationSelectChange);
+      nextButton.addEventListener('click', nextPageClick);
+      previousButton.addEventListener('click', onPaginationPrevClick);
+
+      fetch('https://api.jikan.moe/v4/genres/anime')
+        .then(function (response) {
+          return response.json();
+        })
+        .then(renderGenres);
+
+      loadList('top');
+    </script>
+  </body>
+</html>

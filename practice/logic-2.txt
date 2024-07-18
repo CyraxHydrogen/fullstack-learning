@@ -1,0 +1,10 @@
+Requirement
+ - khi bam cai nut
+ - set cai string "A button is clicked" vao cai input
+ 
+ Code
+1. select cai nut
+2. tao cai function
+3. set click event voi function tao ra o buoc 2 vao cai button
+4. khi button click (function 2 is called):
+5. set cai string "A button is clicked" vao input value 

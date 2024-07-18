@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HTML Template</title>
+    <style>
+      .container {
+        display: flex;
+        justify-content: center;
+      }
+      .button {
+        color: white;
+        border-radius: 10px;
+        background-color: #007bff;
+        padding: 10px 20px;
+        border: none;
+      }
+      .button:hover {
+        background-color: #0056b3;
+      }
+      .input {
+        border-radius: 10px;
+        padding: 5px 20px;
+        border: 1px solid #666;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <input type="text" class="input" />
+      <button class="button">Click me to open a alert</button>
+    </div>
+    <script>
+      let button = document.querySelector('button');
+      let input = document.querySelector('input');
+      function buttonClicked() {
+        input.value = 'A button is clicked';
+      }
+
+      button.addEventListener('click', buttonClicked);
+    </script>
+  </body>
+</html>

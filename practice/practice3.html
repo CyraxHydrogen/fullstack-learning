@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HTML Template</title>
+    <style>
+      body {
+        background-color: #f4f4f4;
+      }
+      .container {
+        margin: 50px;
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 9px 10px rgba(0, 0, 0, 0.1);
+      }
+      .name {
+        padding-bottom: 20px;
+        font-size: 1.5em;
+        font-weight: bold;
+      }
+      .fullname {
+        padding-top: 20px;
+      }
+      input {
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+      button {
+        cursor: pointer;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="name">Enter Your Name</div>
+      <input type="text" placeholder="First name" class="firstname" />
+      <input type="text" placeholder="Last name" class="lastname" />
+      <button class="button">Show Full Name</button>
+      <div class="fullname">Full Name:</div>
+    </div>
+    <script>
+      let button = document.querySelector('button');
+      let firstNameInput = document.querySelector('.firstname');
+      let lastNameInput = document.querySelector('.lastname');
+      let fullName = document.querySelector('.fullname');
+      function buttonClick() {
+        firstname = firstNameInput.value;
+        lastname = lastNameInput.value;
+
+        fullName.innerHTML = `Full Name:${firstname}${lastname}`;
+      }
+      button.addEventListener('click', buttonClick);
+    </script>
+  </body>
+</html>

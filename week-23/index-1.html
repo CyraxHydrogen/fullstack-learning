@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Week 23</title>
+  </head>
+  <body>
+    <button data-component="double">
+      Multiply by 2 all values in the array
+    </button>
+    <button data-component="minus">
+      Take away 10 from all values in the array
+    </button>
+    <ul data-component="result"></ul>
+
+    <script>
+      const numbers = [1, 35, 60, 5, 888, 2];
+      const multiplyBtn = document.querySelector('[data-component="double"]');
+      const list = document.querySelector('[data-component="result"]');
+      const minusBtn = document.querySelector('[data-component="minus"]');
+
+      function clickMultiplyBtn() {
+        const items = [];
+
+        for (let i = 0; i < numbers.length; i++) {
+          let currentNumber = numbers[i];
+          const multiplyNumber = currentNumber * 2;
+          const item = `<li>${multiplyNumber}</li>`;
+          items.push(item);
+        }
+        const content = items.join('');
+        list.innerHTML = items;
+      }
+
+      const clickMinusBtn = () => {
+        const items = numbers.map((currentNumber) => {
+          const minusNumber = currentNumber - 10;
+          const item = `<li>${minusNumber}</li>`;
+          return item;
+        });
+        const content = items.join('');
+        list.innerHTML = items;
+      };
+      multiplyBtn.addEventListener('click', clickMultiplyBtn);
+      minusBtn.addEventListener('click', clickMinusBtn);
+    </script>
+  </body>
+</html>

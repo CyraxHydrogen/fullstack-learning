@@ -1,0 +1,33 @@
+table {
+  border-collapse: collapse;
+}
+th {
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  text-align: left;
+  padding: 10px;
+}
+td {
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  text-align: left;
+  padding: 10px;
+}
+tr:nth-child(even) {
+  background-color: lightgray;
+}
+button {
+  background-color: darkgray;
+  border-radius: 20px;
+  border: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+button:hover {
+  background-color: black;
+  color: white;
+}

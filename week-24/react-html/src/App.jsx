@@ -3,6 +3,7 @@ import './App.css';
 import Header from './components/Header';
 import Tasks from './components/Tasks';
 import AdvancedTasks from './components/AdvancedTasks';
+import Counter from './components/Counter';
 function App() {
   const items = [
     { content: 'Go for a walk', completed: false },
@@ -12,7 +13,7 @@ function App() {
 
   return (
     <div className="container">
-      <Header title="Tasks of the day" />
+      <Header title="Tasks of the day" titleVisible={false} age={15} />
 
       <div>
         <Tasks>
@@ -25,6 +26,9 @@ function App() {
 
       <div>
         <AdvancedTasks items={items} />
+      </div>
+      <div>
+        <Counter />
       </div>
     </div>
   );

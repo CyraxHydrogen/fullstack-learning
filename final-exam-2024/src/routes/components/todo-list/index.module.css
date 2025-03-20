@@ -1,0 +1,24 @@
+.todolist {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+}
+.todocategory {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.todoitem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  border-radius: 4px;
+}
+.todoitem:hover {
+  background: #f5f5f5;
+}
+.completedtask {
+  text-decoration: line-through;
+  color: gray;
+}
